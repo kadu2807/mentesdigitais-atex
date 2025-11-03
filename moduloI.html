@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+    <script src="js/script.js" defer></script>
+    <title>Módulo I</title>
+    <style>
+body{
+    background: #5847F4;
+    background: linear-gradient(90deg,rgba(88, 71, 244, 1) 28%, rgba(60, 186, 255, 1) 70%, rgba(60, 186, 255, 1) 82%);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.topbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(217, 217, 217, 0.1);
+    color: white;
+    padding: 10px 20px;
+}
+
+.barras{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.barras div{
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+
+.logo img{
+    width: 170px;
+    height: auto;
+}
+
+.sidebar{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #4496FB;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+}
+
+.sidebar a{
+    text-align: center;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover{
+    background-color: rgba(217, 217, 217, 0.1);
+}
+
+.closebtn{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar img{
+    width: 150px;
+    position: relative;
+    left: 40px;
+    top: 400px;
+}
+
+.aulas {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    padding: 0 20px;
+    margin-bottom: 40px;
+}
+
+.video-container {
+    max-width: 720px;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    background-color: black;
+}
+
+
+/* Responsivo */
+@media (max-width: 850px) {
+  .aulas {
+        flex-direction: column;
+        align-items: center;
+  }
+  
+  .video-container{
+        width: 90%;
+  }
+}
+
+</style>
+</head>
+<body>
+<div class="topbar">
+    <div class="barras" onclick="toggleSidebar()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="logo"><img src="images/mentesdigitais.png" alt="Logo Mentes Digitais"></div>
+</div>
+
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">×</a>  
+    <a href="index.html">HOME</a>
+    <hr>
+    <a href="moduloI.html">MÓDULO I</a>
+    <hr>
+    <a href="moduloII.html">MÓDULO II</a>
+    <hr>
+    <a href="moduloIII.html">MÓDULO III</a>
+    <hr>
+    <a href="moduloIV.html">MÓDULO IV</a>
+    <hr>
+    <a href="moduloV.html">MÓDULO V</a>
+    <img src="images/mentesdigitais.png" alt="Logo Mentes Digitais">
+</div>
+
+<div class="main">
+    <h1 class="titulo-moldulos">MÓDULO I</h1>
+</div>
+
+<div class="main">
+<section class="conteudo">
+        <p>Neste módulo, você será introduzido ao universo do design digital e ao Figma. Vamos explorar os conceitos básicos da área e conhecer as principais funcionalidades da ferramenta, para que você se familiarize com o ambiente de trabalho e dê os primeiros passos na criação de interfaces.</p>
+        <p class="p2">Comece agora: assista às aulas e pratique com as atividades do Módulo 1!</p>
+
+        <div class="aulas">
+        <div class="video-container">
+            <iframe id="videoPlayer" width="100%" height="100%"
+                src="https://www.youtube.com/embed/Jwq9wUYQPgU?si=XiJgvLeKNYwL1z93"
+                title="Introdução ao Figma"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
+</div>
+
+        <div class="pdf-container">
+            <a href="pdf/Aula 1 - Introdução ao Design Digital e Primeiros Passos.pdf">Baixe o E-Book complementar!</a>
+        </div>
+
+        <div class="quiz-container">
+        <div id="quiz">
+            <div class="question" id="question"></div>
+            <div class="options" id="options"></div>
+            <button class="next-btn" id="nextBtn">Avançar &gt;&gt;&gt;</button>
+            <button class="prev-btn" id="prevBtn">&lt;&lt; Voltar</button>
+        </div>
+        <div class="result" id="result" style="display:none;"></div>
+</div>
+</section>
+</div>
+
+<a href="mentesdigitais.sup@gmail.com" class="support-btn">Suporte</a>
+
+<footer class="footer">
+    <div class="footer-content">
+        <p class="project-desc">
+            Atex | PII mini curso pensando em dar o primeiro passo no<strong> design e prototipagem usando figma</strong>,
+            com o objetivo de ensinar os conceitos básicos de criação visual e prototipagem.
+        </p>
+
+        <p class="team">
+            <strong>Equipe:</strong> Antuny Marques · Carlos Eduardo · Eduardo Calori · Eduardo Ferreira · João Paulo · José Otávio 
+        </p>
+
+        <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        ↑ Voltar ao topo
+        </button>
+    </div>
+    <hr style="width: 70%; margin-top: 30px; margin-bottom: 30px;">
+    <p class="footer-copy">© 2025 Equipe Mentes Digitais | Computação Unifenas — Todos os direitos reservados.</p>
+</footer>
+</body>
+</html>
