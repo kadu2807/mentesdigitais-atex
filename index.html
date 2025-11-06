@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/icon-site.png" type="image/png">
+
     <script src="js/script.js" defer></script>    
 <title>Mentes Digitais</title>
 </head>
@@ -31,7 +33,6 @@
     <a href="moduloIV.html">MÓDULO IV</a>
     <hr>
     <a href="moduloV.html">MÓDULO V</a>
-    <img src="images/mentesdigitais.png" alt="Logo Mentes Digitais">
 </div>
 
 <div class="main">
@@ -96,11 +97,76 @@
             <p><strong>Transforme</strong> suas ideias em protótipos! <br> Dê o <strong>primeiro</strong> passo na sua jornada no design digital.</p>
             <a href="moduloI.html"><strong>INICIAR CURSO</strong></a>
           </div>
-
       </section>
+
+      <section class="avaliacoes">
+        <h2 class="titulo">O que nossos alunos estão dizendo</h2>
+        <div class="carrossel-container">
+            <button class="seta esquerda" id="setaEsquerda">❮</button>
+
+            <div class="carrossel" id="carrossel">
+            <div class="card">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="foto">
+                <h3>Mariana Lopes</h3>
+                <p class="data">10/10/2025</p>
+                <p>"Minicurso excelente, explicação impecável! Recomendo demais."</p>
+            </div>
+
+            <div class="card">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="foto">
+                <h3>João Silva</h3>
+                <p class="data">22/09/2025</p>
+                <p>"Fiquei impressionado com a qualidade das aulas, elas são direto ao ponto, sem enrolação."</p>
+            </div>
+
+            <div class="card">
+                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="foto">
+                <h3>Ana Beatriz</h3>
+                <p class="data">02/08/2025</p>
+                <p>"O site é fácil de usar e o suporte respondeu muito rápido!"</p>
+            </div>
+
+            <div class="card">
+                <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="foto">
+                <h3>Rafael Mendes</h3>
+                <p class="data">15/07/2025</p>
+                <p>"Muito bom para iniciantes!. Recomendo."</p>
+            </div>
+
+            <div class="card">
+                <img src="https://randomuser.me/api/portraits/women/23.jpg" alt="foto">
+                <h3>Camila Rocha</h3>
+                <p class="data">28/06/2025</p>
+                <p>"Navegabilidade muito boa e aulas que realmente prendem a atenção!"</p>
+            </div>
+            </div>
+
+            <button class="seta direita" id="setaDireita">❯</button>
+        </div>
+        </section>
+
 </div>
 
-<a href="mentesdigitais.sup@gmail.com" class="support-btn">Suporte</a>
+<a href="mailto:mentesdigitais.sup@gmail.com?subject=Ajuda%20no%20site%20Mentes%20Digitais&body=Olá,%20preciso%20de%20ajuda%20com..." 
+   class="btn-suporte" 
+   title="Enviar e-mail para o suporte">
+   💬 <span>Suporte</span>
+</a>
+
+<script>
+const carrossel = document.getElementById('carrossel');
+const esquerda = document.getElementById('setaEsquerda');
+const direita = document.getElementById('setaDireita');
+
+const scrollAmount = 300; // distância de rolagem
+
+direita.addEventListener('click', () => {
+  carrossel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+});
+esquerda.addEventListener('click', () => {
+  carrossel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+});
+</script>
 
 <footer class="footer">
     <div class="footer-content">

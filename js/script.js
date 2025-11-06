@@ -35,39 +35,168 @@ reveal();
 // atividades
 const quizzes = {
     1: [
-        { question: "1. Qual é o principal objetivo do Figma?", options: ["a) Escrever códigos para aplicativos", "b) Criar interfaces e protótipos de design digital", "c) Editar vídeos e áudios", "d) Gerenciar bancos de dados"], correct: 1 },
-        { question: "2. O que significa 'interface' no contexto de design digital?", options: ["a) Um tipo de software de edição de fotos", "b) O meio pelo qual o usuário interage com um aplicativo ou site", "c) Um arquivo de imagem em alta resolução", "d) Um código que define a velocidade do site"], correct: 1 },
-        { question: "3. Qual das seguintes funcionalidades é exclusiva do Figma?", options: ["a) Permite salvar imagens em diferentes formatos", "b) Oferece ferramentas de desenho vetorial", "c) Permite colaboração simultânea entre vários usuários em tempo real", "d) Possibilita imprimir o arquivo diretamente"], correct: 2 },
-        { question: "4. No Figma, o que é um 'frame'?", options: ["a) Um container que organiza elementos de design", "b) Uma ferramenta para medir cores", "c) Um tipo de plugin para animações", "d) Um efeito de sombra para imagens"], correct: 0 },
-        { question: "5. Qual prática é essencial ao iniciar um projeto no Figma?", options: ["a) Criar ícones antes da estrutura da tela", "b) Ignorar a usabilidade no início", "c) Definir a hierarquia visual e layout antes dos detalhes", "d) Exportar o design final antes de testar"], correct: 2 }
+        { question: "1. O que significa a sigla UI/UX?", options: [
+            "A) User Interface / User Experience", 
+            "B) Unified Interaction / User Exchange", 
+            "C) User Information / Universal Experience", 
+            "D) Utility Interface / Usage Experience"], 
+            correct: 0 },
+        { question: "2. Qual é a principal função do Figma?", options: [
+            "A) Criação de vídeos", 
+            "B) Criação de interfaces e protótipos digitais", 
+            "C) Edição de fotos", 
+            "D) Programação de sites"], 
+            correct: 1 },
+        { question: "3. O Figma é baseado em qual tipo de tecnologia?", options: [
+            "A) Aplicativo desktop", 
+            "B) Plataforma online baseada em nuvem", 
+            "C) Software offline", 
+            "D) Sistema operacional"], 
+            correct: 1 },
+        { question: "4. Qual é a diferença entre UI e UX?", options: [
+            "A) UI é sobre código e UX é sobre design", 
+            "B) UX é a interface e UI é a navegação", 
+            "C) UI é aparência e UX é experiência do usuário", 
+            "D) Não há diferença"], 
+            correct: 2 },
+        { question: "5. O que é um wireframe?", options: [
+            "A) Protótipo funcional", 
+            "B) Código HTML", 
+            "C) Imagem final do design", 
+            "D) Esboço básico de layout"], 
+            correct: 3 }
     ],
+    
     2: [
-        { question: "1. O que são componentes no Figma?", options: ["a) Partes do código do site", "b) Elementos reutilizáveis de design", "c) Tipos de arquivo SVG", "d) Modelos prontos"], correct: 1 },
-        { question: "2. O que ocorre ao alterar o componente mestre?", options: ["a) Todas as instâncias são atualizadas", "b) Nenhuma instância muda", "c) O projeto é apagado", "d) Apenas o texto muda"], correct: 0 },
-        { question: "3. O Auto Layout serve para quê?", options: ["a) Ajustar automaticamente espaçamentos e tamanhos", "b) Exportar arquivos PNG", "c) Fazer animações automáticas", "d) Aplicar efeitos visuais"], correct: 0 },
-        { question: "4. O que o painel de prototipagem faz?", options: ["a) Cria conexões e animações entre telas", "b) Gera códigos CSS", "c) Cria componentes automáticos", "d) Define cores do layout"], correct: 0 },
-        { question: "5. Qual vantagem dos componentes?", options: ["a) Reduzem retrabalho e mantêm consistência", "b) Aumentam o peso do arquivo", "c) Impedem mudanças", "d) Tornam o projeto mais lento"], correct: 0 }
+        { question: "1. Qual ferramenta desenha formas básicas no Figma?", options: [
+            "A) Move Tool", 
+            "B) Shape Tool", 
+            "C) Text Tool", 
+            "D) Frame Tool"], 
+            correct: 1 },
+        { question: "2. Como inserir texto em um layout?", options: [
+            "A) Usando a ferramenta Text", 
+            "B) Com o pincel", 
+            "C) Clicando com botão direito", 
+            "D) No menu Prototype"], 
+            correct: 0 },
+        { question: "3. O que é um Frame?", options: [
+            "A) Um tipo de efeito", 
+            "B) Um contêiner que organiza elementos", 
+            "C) Uma fonte", 
+            "D) Uma paleta de cores"], 
+            correct: 1 },
+        { question: "4. Qual a diferença entre Group e Frame?", options: [
+            "A) Group é mais rápido", 
+            "B) Frame é menor", 
+            "C) Group é temporário, Frame é estrutural",
+            "D) Não há diferença"], 
+            correct: 2 },
+        { question: "5. Como aplicar uma cor personalizada?", options: [
+            "A) Selecionar o objeto e escolher a cor no painel Fill", 
+            "B) Arrastar a cor com o mouse", 
+            "C) Clicar duas vezes no objeto", 
+            "D) Usar o menu Prototype"], 
+            correct: 0 }
     ],
+    
     3: [
-        { question: "1. O que são estilos no Figma?", options: ["a) Conjuntos de propriedades reutilizáveis como cores e textos", "b) Códigos CSS importados", "c) Modelos prontos da comunidade", "d) Ferramentas de prototipagem"], correct: 0 },
-        { question: "2. Qual é o benefício de usar estilos de texto?", options: ["a) Garantir consistência tipográfica no projeto", "b) Permitir exportar fontes", "c) Aumentar a resolução", "d) Criar efeitos 3D"], correct: 0 },
-        { question: "3. O que é biblioteca compartilhada no Figma?", options: ["a) Um espaço com recursos comuns entre arquivos", "b) Um plugin externo", "c) Um backup automático", "d) Uma pasta de imagens"], correct: 0 },
-        { question: "4. O que acontece ao atualizar um estilo em uma biblioteca?", options: ["a) Os arquivos conectados são atualizados", "b) Nada muda", "c) O projeto trava", "d) O estilo é apagado"], correct: 0 },
-        { question: "5. Estilos de cor servem para:", options: ["a) Aplicar cores consistentes e fáceis de atualizar", "b) Importar imagens", "c) Criar gradientes automáticos", "d) Alterar a opacidade do fundo"], correct: 0 }
+        { question: "1. O que é um componente?", options: [
+            "A) Um grupo de camadas", 
+            "B) Um elemento reutilizável", 
+            "C) Uma animação", 
+            "D) Uma cor fixa"], 
+            correct: 1 },
+        { question: "2. Qual a vantagem de usar componentes?", options: [
+            "A) Diminui o contraste", 
+            "B) Reduz o tamanho do arquivo", 
+            "C) Cria mais efeitos", 
+            "D) Facilita consistência e reaproveitamento"],  
+            correct: 3 },
+        { question: "3. O que é uma instância?", options: [
+            "A) Cópia vinculada de um componente",
+            "B) Um frame vazio", 
+            "C) Uma animação", 
+            "D) Um texto dinâmico"], 
+            correct: 0 },
+        { question: "4. Por que nomear camadas é importante?", options: [
+            "A) Aumenta o contraste", 
+            "B) Gera links automáticos", 
+            "C) Cria novos componentes", 
+            "D) Facilita organização e busca"], 
+            correct: 3 },
+        { question: "5. O que diferencia Group e Frame?", options: [
+            "A) Frame tem propriedades próprias", 
+            "B) Group é permanente", 
+            "C) Frame apaga camadas", 
+            "D) Group permite rolagem"], 
+            correct: 0 }
     ],
+    
     4: [
-        { question: "1. O que são grids no Figma?", options: ["a) Guias de alinhamento para organização do layout", "b) Códigos de espaçamento CSS", "c) Plugins de animação", "d) Molduras automáticas"], correct: 0 },
-        { question: "2. O grid ajuda em quê?", options: ["a) Manter alinhamento e proporções consistentes", "b) Aumentar contraste", "c) Corrigir erros de prototipagem", "d) Adicionar sombras"], correct: 0 },
-        { question: "3. Qual o uso das constraints?", options: ["a) Definir comportamento de redimensionamento dos elementos", "b) Adicionar bordas automáticas", "c) Gerar código CSS", "d) Exportar imagens"], correct: 0 },
-        { question: "4. Como se ativa o grid em um frame?", options: ["a) Clicando em ‘Layout grid’ no painel direito", "b) Pressionando Enter", "c) Apertando Ctrl + G", "d) Clicando duas vezes no nome do frame"], correct: 0 },
-        { question: "5. Um layout bem alinhado melhora:", options: ["a) A legibilidade e a harmonia visual", "b) O tamanho do arquivo", "c) A velocidade do Figma", "d) A resolução das imagens"], correct: 0 }
+        { question: "1. Qual modo conecta telas no Figma?", options: [
+            "A) Design", 
+            "B) Prototype", 
+            "C) Inspect", 
+            "D) Share"], 
+            correct: 1 },
+        { question: "2. Como visualizar o protótipo?", options: [
+            "A) No modo Play", 
+            "B) No menu Export", 
+            "C) Na aba Design", 
+            "D) Na barra lateral"], 
+            correct: 0 },
+        { question: "3. Cite um tipo de transição.", options: [
+            "A) Copy Frame", 
+            "B) Hover Auto", 
+            "C) Move In", 
+            "D) Auto Swap"], 
+            correct: 2 },
+        { question: "4. O que diferencia protótipos de alta e baixa fidelidade?", options: [
+            "A) A animação", 
+            "B) O número de frames", 
+            "C) A cor usada", 
+            "D) O nível de detalhe visual"],
+            correct: 3 },
+        { question: "5. Por que testar o protótipo é importante?", options: [
+            "A) Para validar a experiência do usuário", 
+            "B) Para exportar imagens", 
+            "C) Para criar códigos", 
+            "D) Para reduzir fontes"], 
+            correct: 0 }
     ],
+    
     5: [
-        { question: "1. O que é prototipagem interativa?", options: ["a) Simular a navegação real de um usuário", "b) Criar ícones vetoriais", "c) Exportar imagens", "d) Fazer ajustes de cores"], correct: 0 },
-        { question: "2. Qual recurso permite transições entre telas?", options: ["a) Conexões de protótipo (interactions)", "b) Componentes", "c) Auto Layout", "d) Layout grid"], correct: 0 },
-        { question: "3. O que são animações microinterativas?", options: ["a) Pequenos movimentos que dão feedback visual ao usuário", "b) Efeitos de vídeo", "c) Plugins externos", "d) Funções de exportação"], correct: 0 },
-        { question: "4. Qual o objetivo do modo de apresentação no Figma?", options: ["a) Testar o fluxo e comportamento dos protótipos", "b) Editar cores", "c) Criar componentes automáticos", "d) Aplicar grids"], correct: 0 },
-        { question: "5. Por que prototipar é importante?", options: ["a) Permite validar ideias e usabilidade antes da codificação", "b) Gera o código final", "c) Substitui o design completo", "d) Melhora o desempenho do Figma"], correct: 0 }
+        { question: "1. No Figma, o uso de frames e grids ajuda o designer a manter o quê em um layout?", options: [
+            "A) Organização e alinhamento visual", 
+            "B) Efeitos de animação", 
+            "C) Redução do tamanho do arquivo", 
+            "D) Melhor contraste entre camadas"], 
+            correct: 0 },
+        { question: "2. O que acontece quando se edita o componente principal no Figma?", options: [
+            "A) Apenas o original muda", 
+            "B) Todas as instâncias são atualizadas automaticamente", 
+            "C) Cria-se uma nova variante", 
+            "D) As cópias perdem vínculo"], 
+            correct: 1 },
+        { question: "3. Durante um teste de usabilidade, o protótipo foi usado para simular cliques e transições. Que tipo de recurso está sendo avaliado?", options: [
+            "A) A hierarquia visual", 
+            "B) A experiência do usuário (UX)", 
+            "C) O design da interface (UI)", 
+            "D) O grid do layout"], 
+            correct: 1 },
+        { question: "4. Um designer quer compartilhar componentes entre projetos sem perder vínculo. Qual procedimento é o mais adequado?", options: [
+            "A) Exportar os frames como imagem", 
+            "B) Copiar e colar entre arquivos", 
+            "C) Publicar os componentes em uma biblioteca compartilhada", 
+            "D) Converter os componentes em variantes"], 
+            correct: 2 },
+        { question: "5. Em um protótipo com várias transições, o usuário sente lentidão e confusão visual. Qual princípio de design foi provavelmente comprometido?", options: [
+            "A) Feedback e consistência", 
+            "B) Contraste e tipografia", 
+            "C) Variedade e dinamismo", 
+            "D) Hierarquia e cor"],
+            correct: 0 }
     ]
 };
 
