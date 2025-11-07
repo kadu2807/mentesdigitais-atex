@@ -735,8 +735,11 @@ body{
 .info-modulos{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
     gap: 10px;
     margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .mod-un{
