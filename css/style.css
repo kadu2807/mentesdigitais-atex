@@ -523,8 +523,8 @@ body{
     border: none;
     font-size: 2rem;
     cursor: pointer;
-    padding: 0.5rem 0.8rem;
-    border-radius: 50%;
+    padding: 0.1rem 0.6rem;
+    border-radius: 30%;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     position: absolute;
     z-index: 2;
@@ -855,6 +855,15 @@ body{
     padding: 10px 10px;
     font-size: 12px;
 }
+}
 
+@media (max-width: 375px) {
+.mod-un{
+    width: 90%;
+}
+
+.mod-un p{
+    font-size: 10px;
+}    
 }
 
