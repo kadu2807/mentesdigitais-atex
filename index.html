@@ -11,6 +11,14 @@
 <title>Mentes Digitais</title>
 </head>
 <body>
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <h2>Digite seu nome completo</h2>
+    <input type="text" id="nomeInput" placeholder="Nome completo">
+    <button onclick="salvarNome()">Salvar</button>
+  </div>
+</div>
+
 <div class="topbar">
     <div class="barras" onclick="toggleSidebar()">
         <div></div>
@@ -38,7 +46,7 @@
 <div class="main">
     <section class="intro reveal">
         <div class="txt-intro">
-            <p>CURSO DE <br><strong>DESING E <br>PROTOTIPAGEM <br>USANDO FIGMA</strong></p>
+            <p>CURSO DE <br><strong>DESIGN E <br>PROTOTIPAGEM <br>USANDO FIGMA</strong></p>
             <a href="moduloI.html"><strong>INICIAR CURSO</strong></a>
         </div>
         <div class="boy"><img src="images/garoto.png" alt="Garoto segurando um notebook"></div>
@@ -51,7 +59,6 @@
         <div class="devs-n">
             <div class="dev-name"><p>Antuny Marques</p></div>
             <div class="dev-name"><p>Carlos Eduardo</p></div>
-            <div class="dev-name"><p>Eduardo Calori</p></div>
             <div class="dev-name"><p>Eduardo Ferreira</p></div>
             <div class="dev-name"><p>João Paulo</p></div>
             <div class="dev-name"><p>José Otávio</p></div>
@@ -176,7 +183,7 @@ esquerda.addEventListener('click', () => {
         </p>
 
         <p class="team">
-            <strong>Equipe:</strong> Antuny Marques · Carlos Eduardo · Eduardo Calori · Eduardo Ferreira · João Paulo · José Otávio 
+            <strong>Equipe:</strong> Antuny Marques · Carlos Eduardo · Eduardo Ferreira · João Paulo · José Otávio 
         </p>
 
         <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">

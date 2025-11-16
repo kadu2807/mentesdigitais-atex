@@ -1,3 +1,24 @@
+function salvarNome() {
+  const nome = document.getElementById("nomeInput").value;
+  if (nome.trim() !== "") {
+    localStorage.setItem("nomeCompleto", nome);
+    document.getElementById("popup").style.display = "none";
+    document.getElementById("nomeUsuario").textContent = nome;
+  }
+}
+
+// Mostrar modal só se não existir nome salvo
+window.onload = function () {
+  const nomeSalvo = localStorage.getItem("nomeCompleto");
+
+  if (!nomeSalvo) {
+    document.getElementById("popup").style.display = "flex";
+  } else {
+    document.getElementById("nomeUsuario").textContent = nomeSalvo;
+  }
+};
+
+
 // barra lateral
 function toggleSidebar() {
     const sidebar = document.getElementById("mySidebar");
@@ -302,9 +323,35 @@ function selectOption(selected) {
 function showResult() {
     document.getElementById("quiz").style.display = "none";
     const percent = Math.round((score / quizData.length) * 100);
+
+    let html = `<p><strong>Porcentagem de acertos:</strong> ${percent}%</p>`;
+
+    if (percent >= 60) {
+        // APROVADO
+        html += `<h2>🎉 Parabéns! Você concluiu este módulo!</h2>`;
+        
+        // GERAR GABARITO
+        html += `<h3>Gabarito:</h3><ul>`;
+        quizData.forEach((q) => {
+            html += `<li>${q.question} <br><strong>Resposta correta:</strong> ${q.options[q.correct]}</li><br>`;
+        });
+        html += `</ul>`;
+
+        desbloquearProximoModulo(percent);
+
+    } else {
+        // REPROVADO
+        html += `
+            <h2>❌ Você não atingiu 60%.</h2>
+            <p>Atualize a página e tente novamente!</p>
+        `;
+
+        // Apenas salva o score, sem desbloquear
+        desbloquearProximoModulo(percent);
+    }
+
     resultEl.style.display = "block";
-    resultEl.innerHTML = `Você acertou ${score}/${quizData.length} questões.<br>Porcentagem: ${percent}%`;
-    desbloquearProximoModulo(percent);
+    resultEl.innerHTML = html;
 }
 
 prevBtn.addEventListener("click", () => {
@@ -330,6 +377,3 @@ function trocarVideo(videoId, linkElement) {
     const iframe = document.getElementById("videoPlayer");
     iframe.src = `https://www.youtube.com/embed/${videoId}`;
 }
-
-
-

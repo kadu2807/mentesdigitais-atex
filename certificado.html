@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Certificado</title>
+
+<!-- Biblioteca para gerar PDF -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        background: #5847F4;
+        background: linear-gradient(90deg,rgba(88, 71, 244, 1) 28%, rgba(60, 186, 255, 1) 70%, rgba(60, 186, 255, 1) 82%);
+        padding: 40px;
+        font-family: 'Georgia', serif;
+    }
+
+    #certificado {
+        width: 900px;
+        height: 600px;
+        background: #000a37;
+        padding: 40px;
+        border: 10px solid #c9a86d;
+        position: relative;
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        background-size: cover;
+    }
+
+    h1 {
+        margin-top: 40px;
+        font-size: 40px;
+        color: #ffffff;
+    }
+
+    h2 {
+        font-size: 32px;
+        margin: 20px 0;
+        color: #ffffff;
+    }
+
+    p {
+        font-size: 20px;
+        color: #c9c9c9;
+    }
+
+    .assinatura {
+        margin-top: 200px;
+        bottom: 40px;
+        right: 80px;
+        text-align: center;
+    }
+
+    .assinatura img {
+        width: 180px;
+    }
+
+    #baixarPDF {
+        margin-top: 30px;
+        padding: 12px 22px;
+        font-size: 18px;
+        background: #c9a86d;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        color: #fff;
+        transition: .3s;
+    }
+
+    #baixarPDF:hover {
+        background: #b89255;
+    }
+</style>
+</head>
+<body>
+
+<div>
+    <div id="certificado">
+        <h1 style="text-align:center;">Declaração de Conclusão</h1>
+
+        <p style="text-align:center;">Certificamos que</p>
+
+        <h2 id="nomeUsuario" style="text-align:center;"></h2>
+
+        <p style="text-align:center; margin-top:10px;">
+            concluiu com êxito o Mini Curso de Figma, comprovando participação, desempenho satisfatório e compreensão das principais ferramentas e práticas de criação de interfaces digitais.
+        </p>
+
+        <div class="assinatura">
+            <img src="images/mentesdigitais.png" alt="Mentes Digitais Logo">
+            <p>Unifenas | Ciência da Computação</p>
+        </div>
+    </div>
+
+    <button id="baixarPDF">Baixar PDF</button>
+</div>
+
+
+<script>
+window.onload = function () {
+    const nome = localStorage.getItem("nomeCompleto");
+    document.getElementById("nomeUsuario").textContent = nome;
+};
+
+document.getElementById("baixarPDF").onclick = function () {
+    const { jsPDF } = window.jspdf;
+
+    html2canvas(document.getElementById("certificado")).then(canvas => {
+        const img = canvas.toDataURL("image/png");
+
+        const pdf = new jsPDF('landscape', 'px', [canvas.width, canvas.height]);
+        pdf.addImage(img, 'PNG', 0, 0, canvas.width, canvas.height);
+        pdf.save("certificado.pdf");
+    });
+};
+</script>
+
+</body>
+</html>

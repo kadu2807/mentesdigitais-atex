@@ -7,6 +7,24 @@ body{
 
 /* cabeçalho */
 
+.popup {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
 .topbar {
     position: fixed;
     top: 0;
@@ -146,7 +164,7 @@ body{
 
 .devs-n{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     height: auto;
     align-items: center;
     justify-items: center;
@@ -338,7 +356,7 @@ body{
 }
 
 .conteudo p{
-    text-align: center;
+    text-align: left;
     padding: 20px;
     color: white;
     font-size: 20px;
@@ -353,7 +371,8 @@ body{
     border-radius: 20px;
     width: 800px;
     height: 300px;
-    max-width: 90%;
+    min-height: 300px;
+    height: auto;
     box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
 }
 
@@ -405,7 +424,14 @@ body{
 
 .result {
     text-align: center;
-    font-size: 20px;
+    font-size: 10px;
+}
+
+.result {
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+    line-height: 1.5;
 }
 
 /* pdfs */
@@ -428,6 +454,14 @@ body{
 .pdf-container a:hover{
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     background: linear-gradient(135deg, #CFA90A, #ffd426);
+}
+
+.titulo-atv h2{
+    font-size: 30px;
+    margin-bottom: 40px;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); 
 }
 
 /* suporte */
@@ -523,8 +557,8 @@ body{
     border: none;
     font-size: 2rem;
     cursor: pointer;
-    padding: 0.5rem 0.8rem;
-    border-radius: 50%;
+    padding: 0.1rem 0.6rem;
+    border-radius: 30%;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     position: absolute;
     z-index: 2;
@@ -574,6 +608,25 @@ body{
     transform: translateY(1px);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
+
+.botao-certificado {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #CFA90A, #ffd426);
+    color: rgb(0, 0, 0);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.25);
+}
+
+.botao-certificado:hover {
+    background: linear-gradient(135deg, #ffd426, #CFA90A);
+}
+
 
 /* RESPONSIVO */
 @media (max-width: 1024px){
@@ -709,7 +762,7 @@ body{
 .dev-name{
     width: 85%;
     height: 80%;
-    font-size: 8px;
+    font-size: 7px;
     text-align: center;
 }
 
@@ -735,8 +788,11 @@ body{
 .info-modulos{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
     gap: 10px;
     margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .mod-un{
@@ -802,9 +858,8 @@ body{
 }
 
 .conteudo p{
-    text-align: center;
     padding: 10px;
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .pdf-container{
@@ -817,10 +872,14 @@ body{
     font-size: 12px;
 }
 
+.titulo-atv h2{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
 .quiz-container {
     padding: 15px;
-    width: 350px;
-    height: 300px;
+    width: 300px;
 }
 
 .question {
@@ -830,7 +889,7 @@ body{
 
 .options button {
     padding: 10px;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .next-btn {
@@ -845,7 +904,7 @@ body{
 
 .result {
     text-align: center;
-    font-size: 14px;
+    font-size: 10px;
 }
 
 .next-module-btn {
@@ -853,5 +912,15 @@ body{
     font-size: 12px;
 }
 
+}
+
+@media (max-width: 375px) {
+.mod-un{
+    width: 90%;
+}
+
+.mod-un p{
+    font-size: 10px;
+}    
 }
 
