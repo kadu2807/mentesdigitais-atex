@@ -911,7 +911,16 @@ body{
     padding: 10px 10px;
     font-size: 12px;
 }
+}
 
+@media (max-width: 375px) {
+.mod-un{
+    width: 90%;
+}
+
+.mod-un p{
+    font-size: 10px;
+}    
 }
 
 @media (max-width: 375px) {
