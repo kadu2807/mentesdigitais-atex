@@ -75,18 +75,6 @@ body{
   background: #e7e7ff;
 }
 
-@media (max-width: 380px) {
-  .popup-content {
-    padding: 30px 20px;
-    max-width: 95%;
-  }
-
-  .popup-content h2 {
-    font-size: 1.3rem;
-  }
-}
-
-
 .topbar {
     position: fixed;
     top: 0;
@@ -762,6 +750,15 @@ body{
 }
 
 @media (max-width: 480px){
+.popup-content {
+    padding: 30px 20px;
+    max-width: 95%;
+}
+
+.popup-content h2 {
+    font-size: 1.3rem;
+}
+    
 .barras{
     gap: 4px;
 }
@@ -973,16 +970,6 @@ body{
     padding: 10px 10px;
     font-size: 12px;
 }
-}
-
-@media (max-width: 375px) {
-.mod-un{
-    width: 90%;
-}
-
-.mod-un p{
-    font-size: 10px;
-}    
 }
 
 @media (max-width: 375px) {
