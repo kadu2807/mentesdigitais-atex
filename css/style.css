@@ -774,196 +774,198 @@ body{
     border-radius: 10px;
 }
 
-  .barras {
+.barras {
     gap: 4px;
-  }
+}
 
-  .barras div {
+.barras div {
     width: 20px;
     height: 2px;
-  }
+}
 
-  .logo img {
+.logo img {
     width: 100px;
     right: 30px;
     position: relative;
-  }
+}
 
-  .sidebar a {
+.sidebar a {
     font-size: 15px;
-  }
+}
 
-  .sidebar hr {
+.sidebar hr {
     width: 50%;
-  }
-
-  .main {
+}
+.main {
     margin-top: 30px;
     padding: 10px;
-  }
+}
 
-  .intro {
+.intro {
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     gap: 20px;
     padding: 20px;
-  }
+}
 
-  .boy {
+.boy {
     display: none;
-  }
+}
 
-  .txt-intro p {
+.txt-intro p {
     font-size: 30px;
-  }
+}
 
-  .txt-intro a {
+.txt-intro a {
     padding: 15px;
     font-size: 12px;
-  }
+}
 
-  .devs h2 { 
+.devs h2 { 
     font-size: 25px;
     margin-top: 30px;
-  }
+}
 
-  .dev-name {
+.dev-name {
     width: 85%;
     height: 80%;
     font-size: 7px;
     text-align: center;
-  }
+}
 
-  .about {
+.about {
     width: 95%;
     margin: 50px auto 0;
-  }
+}
  
-  .about-txt {
+.about-txt {
     padding: 10px;
-  }
+}
 
-  .about-txt h1 {
+.about-txt h1 {
     font-size: 25px;
-  }
+}
 
-  .about-txt p {
+.about-txt p {
     font-size: 12px;
     padding: 0 20px;
-  }
+}
 
-  .info-modulos {
+.info-modulos {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     gap: 10px;
     margin: 20px 10px 0;
-  }
+}
 
-  .mod-un {
+.mod-un {
     width: 100%;
     max-width: 150px;
     height: 120px;
-  }
+}
 
-  .mod-un h3 {
+.mod-un h3 {
     font-size: 10px;
-  }
+}
 
-  .mod-un p {
+.mod-un p {
     font-size: 11px;
-  }
+}
 
-  .about-txt1 {
+.about-txt1 {
     padding: 50px 20px 40px;
-  }
+}
 
-  .about-txt1 p {
+.about-txt1 p {
     color: white;
     font-size: 14px;
     padding-bottom: 35px;
-  }
+}
 
-  .about-txt1 a {
+.about-txt1 a {
     padding: 15px;
     font-size: 12px;
-  }
+}
 
-  .avaliacoes h2 {
+.avaliacoes h2 {
     font-size: 25px;
-  }
+}
 
-  .footer {
+.footer {
     margin-top: 40px;
-  }
+}
 
-  .footer p {
+.footer p {
     margin: 20px 0;
     font-size: 12px;
-  }
+}
 
-  .btn-suporte {
+.btn-suporte {
     padding: 5px;
     font-size: 12px;
-  }
+}
 
   /* módulos */
-  .titulo-modulos {
+.titulo-modulos {
     font-size: 25px;
     margin-top: 40px;
-  }
+}
 
-  .conteudo {
+.conteudo {
     width: 95%;
     padding: 10px;
-  }
+}
 
-  .conteudo p {
+.conteudo p {
     padding: 10px;
     font-size: 10px;
-  }
+}
 
-  .pdf-container {
+.pdf-container {
     margin: 50px 0 60px;
-  }
+}
 
-  .pdf-container a {
+.pdf-container a {
     padding: 15px;
     font-size: 12px;
-  }
+}
 
-  .titulo-atv h2 {
+.titulo-atv h2 {
     font-size: 20px;
     margin-bottom: 20px;
-  }
+}
 
-  .quiz-container {
+.quiz-container {
     padding: 15px;
     width: 300px;
-  }
+}
 
-  .question {
+.question {
     font-size: 14px;
     margin-bottom: 20px;
-  }
+}
 
-  .options button {
+.options button {
     padding: 10px;
     font-size: 12px;
-  }
+}
 
-  .next-btn,
-  .prev-btn {
+.next-btn,
+.prev-btn {
     padding: 8px 10px;
     margin-top: 10px;
-  }
+}
 
-  .result {
+.result {
     text-align: center;
     font-size: 10px;
-  }
+}
 
-  .next-module-btn {
+.next-module-btn {
     padding: 10px;
     font-size: 12px;
   }
@@ -971,11 +973,11 @@ body{
 
 @media (max-width: 375px) {
 
-  .mod-un {
+.mod-un {
     width: 90%;
-  }
+}
 
-  .mod-un p {
+.mod-un p {
     font-size: 10px;
   }
 }
